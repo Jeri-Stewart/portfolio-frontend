@@ -1,0 +1,41 @@
+.home-description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.home-description h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+.home-description h2 {
+  font-size: 24px;
+  position: relative;
+}
+
+.typing-cursor {
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+  
+  
