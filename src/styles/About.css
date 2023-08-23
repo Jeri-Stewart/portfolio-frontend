@@ -147,6 +147,13 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
+.dark-mode input[type="checkbox"] {
+  border: 20px solid #240046;
+  box-shadow: 
+  -10px -10px 15px rgba(255, 255, 255, 0.05),
+  10px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
 /*set proeprties for when the button is clicked*/
 
 input[type="checkbox"]:checked{
@@ -156,6 +163,7 @@ input[type="checkbox"]:checked{
   inset -10px -10px 15px rgba(255, 255, 255, 0.5),
   inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
+
 
 .user-icons:hover {
   color: #EB108D;

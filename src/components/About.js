@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import profileImage from "../images/headshot.png";
 import fastlearnerGif from "../images/fast-learner.gif";
 import organizedGif from "../images/organized.gif";
@@ -6,9 +6,13 @@ import CollaborativeGif from "../images/collab.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import PopupModal from './PopupModal.js';
+import { useDarkMode } from "../components/DarkModeContext";
 import "../styles/About.css";
 
-const AboutPage = ({ isDarkMode }) => {
+const About = () => {
+
+  const { isDarkMode } = useDarkMode();
+
   const [checkbox1Checked, setCheckbox1Checked] = useState(false);
   const [checkbox2Checked, setCheckbox2Checked] = useState(false);
   const [checkbox3Checked, setCheckbox3Checked] = useState(false);
@@ -148,4 +152,4 @@ const AboutPage = ({ isDarkMode }) => {
   );
 };
 
-export default AboutPage;
+export default About;

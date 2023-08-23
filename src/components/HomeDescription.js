@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
+import profileImage from "../images/profile-avatar-animation.gif"; 
+import { useDarkMode } from "../components/DarkModeContext";
 import "../styles/Home.css";
-import profileImage from "../images/profile-avatar-animation.gif"; // Import profileImage
+
 
 const jobDescriptions = [
   "tech enthusiast",
@@ -12,7 +14,9 @@ const jobDescriptions = [
   "data professional",
 ];
 
-const HomeDescription = ({ isDarkMode }) => {
+const HomeDescription = () => {
+  const { isDarkMode } = useDarkMode();
+
   const [currentDescriptionIndex, setCurrentDescriptionIndex] = useState(0);
   const [typingDescription, setTypingDescription] = useState("");
   const [typingCursorVisible, setTypingCursorVisible] = useState(true);

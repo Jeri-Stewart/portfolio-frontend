@@ -2,6 +2,7 @@ import React from "react";
 import { Particles } from "react-tsparticles";
 import { loadFireflyPreset } from "tsparticles-preset-firefly";
 
+
 class ParticlesContainer extends React.Component {
   async customInit(engine) {
     console.log("Custom initialization of particles is being called.");

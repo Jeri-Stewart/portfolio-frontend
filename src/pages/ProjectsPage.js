@@ -3,10 +3,13 @@ import { Link } from "react-router-dom";
 import projectOne from "../images/cedarCountyLMS.png";
 import projectTwo from "../images/bookReviewApp.png";
 import projectThree from "../images/Data-img.jpg";
+import { useDarkMode } from "../components/DarkModeContext";
 
 import "../styles/Projects.css";
 
-const ProjectsPage = ({ isDarkMode }) => {
+const ProjectsPage = () => {
+  const { isDarkMode } = useDarkMode();
+
   return (
     <div
       id="projects"

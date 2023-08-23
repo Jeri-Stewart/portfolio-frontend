@@ -1,6 +1,8 @@
 import React from "react";
-import Header from "../components/Header";
+import Header from "../components/Header"
+import { useDarkMode } from "../components/DarkModeContext";
 import "../styles/Skills.css";
+
 import skillsLight1 from "../images/skills-icons-light-1.png";
 import skillsLight2 from "../images/skills-icons-light-2.png";
 import skillsLight3 from "../images/skills-icons-light-3.png";
@@ -22,7 +24,11 @@ import skillsDark8 from "../images/skills-icons-dark-8.png";
 import skillsDark9 from "../images/skills-icons-dark-9.png";
 import skillsDark10 from "../images/skills-icons-dark-10.png";
 
-const SkillsPage = ({ isDarkMode, toggleDarkMode }) => {
+
+
+const SkillsPage = () => {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
     <div
       id="skills"

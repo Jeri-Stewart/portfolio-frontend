@@ -1,12 +1,14 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
 import darkModeImage from "../images/light-dark-mode.png";
+import { useDarkMode } from "../components/DarkModeContext";
 import "../styles/Header.css";
 
-const Header = ({ isDarkMode, toggleDarkMode }) => {
-  console.log("isDarkMode prop in Header:", toggleDarkMode);
+const Header = () => {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
-    <header className="header">
+    <header className={`header ${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <nav className="nav-links">
         <div className="navbar">
           <NavHashLink
@@ -52,10 +54,7 @@ const Header = ({ isDarkMode, toggleDarkMode }) => {
         </div>
         <div
           className="dark-mode-toggle"
-          onClick={() => {
-            console.log("Dark mode toggle button clicked");
-            toggleDarkMode();
-          }}
+          onClick={toggleDarkMode}
         >
           <img src={darkModeImage} alt="Dark Mode Toggle" />
         </div>

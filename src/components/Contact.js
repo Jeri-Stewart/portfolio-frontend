@@ -1,4 +1,5 @@
 import React from "react";
+import { useDarkMode } from "../components/DarkModeContext.js";
 import linkedinLightIcon from "../images/linkedin-light.png";
 import linkedinDarkIcon from "../images/linkedin-dark.png";
 import githubLightIcon from "../images/github-light.png";
@@ -7,7 +8,10 @@ import resumeLightIcon from "../images/resume-light.png";
 import resumeDarkIcon from "../images/resume-dark.png";
 import "../styles/Contact.css";
 
-const Contact = ({ isDarkMode }) => {
+const Contact = () => {
+
+  const { isDarkMode } = useDarkMode();
+
   return (
     <div
       id="contact"

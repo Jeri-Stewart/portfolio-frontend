@@ -1,15 +1,18 @@
-import About from '../components/About';
-import Header from '../components/Header';
+import About from "../components/About";
+import Header from "../components/Header";
+import { useDarkMode } from "../components/DarkModeContext";
 
-const AboutPage = ({ isDarkMode, toggleDarkMode }) => {
-  console.log("isDarkMode prop in AboutPage:", isDarkMode);
+
+const AboutPage = () => {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+
   return (
     <div
       id="about"
-      className={`about-page ${isDarkMode ? 'dark-mode' : 'light-mode'}`}
+      className={`about-page ${isDarkMode ? "dark-mode" : "light-mode"}`}
     >
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-      <About isDarkMode={isDarkMode}/>
+      <About isDarkMode={isDarkMode} />
     </div>
   );
 };

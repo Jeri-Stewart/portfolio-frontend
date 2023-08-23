@@ -67,12 +67,12 @@
   z-index: -1; 
 }
 
-/*  code for frosted glass background, currently not working   */
 .light-mode .frosted-glass-background {
   background-color: rgba(203, 178, 254, 0.5);
 }
 
 .dark-mode .frosted-glass-background {
   background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
 }
-/*     */
+

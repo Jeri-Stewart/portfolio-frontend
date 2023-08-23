@@ -1,26 +1,21 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from "react";
 
 const DarkModeContext = createContext();
 
-export function useDarkMode() {
+export const useDarkMode = () => {
   return useContext(DarkModeContext);
-}
+};
 
-export function DarkModeProvider({ children }) {
+export const DarkModeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const value = {
-    isDarkMode,
-    toggleDarkMode,
+    setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   };
 
   return (
-    <DarkModeContext.Provider value={value}>
+    <DarkModeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
       {children}
     </DarkModeContext.Provider>
   );
-}
+};
