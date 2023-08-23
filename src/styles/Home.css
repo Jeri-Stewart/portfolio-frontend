@@ -5,22 +5,42 @@
   flex-direction: column;
   text-align: center;
   height: 100vh;
+  color: #5a189a; /* Light mode text color */
+  position: relative; /* Add this line */
 }
 
 .profile-image {
-  width: 150px;
-  height: 150px;
+  position: relative;
+  top: 100px;
+  width: 600px; /* Increase the size of the image */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 50%;
   margin-bottom: 16px;
 }
 
-.home-description h1 {
-  font-size: 32px;
+.dark-mode .home-description h1.name {
+  color: #95F1D8; /* Dark mode text color */
+}
+
+.dark-mode .home-description {
+  color: #8e94f2; /* Dark mode text color */
+}
+
+.home-description h1.greeting {
+  position: relative;
+  top: 50px;
+}
+
+.home-description h1.name {
+  font-size: 48px; /* Increase font size */
+  font-family: 'Trattatello', cursive;
   margin-bottom: 8px;
+  color: #EB108D;
 }
 
 .home-description h2 {
-  font-size: 24px;
+  font-size: 32px; /* Increase font size */
+  font-family: 'Andale Mono', monospace; /* Set the font family */
   position: relative;
 }
 
@@ -37,5 +57,22 @@
   }
 }
 
-  
-  
+.frosted-glass-background {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  width: 80%;
+  height: 90%;
+  backdrop-filter: blur(5px);
+  z-index: -1; 
+}
+
+/*  code for frosted glass background, currently not working   */
+.light-mode .frosted-glass-background {
+  background-color: rgba(203, 178, 254, 0.5);
+}
+
+.dark-mode .frosted-glass-background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+/*     */

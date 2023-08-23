@@ -1,0 +1,172 @@
+.about-page {
+  /*background-color: #cbb2fe; */
+  color: #5a189a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.dark-mode .about-page {
+  /*background-color: black; */
+  color: white;
+}
+
+.background-card {
+  position: absolute;
+  top: 53rem;
+  left: 5rem;
+  width: 90rem;
+  height: 100%;
+  background-color: #ececec;
+  border-radius: 15%;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4), 0px 7px 13px -3px rgba(0,0,0,0.3), 0px -3px 0px 0px rgba(0,0,0,0.2) inset;
+  z-index: -1
+}
+
+.dark-mode .background-card {
+  background-color: #240046;
+}
+
+
+
+.about-title {
+  font-size: 32px;
+  font-family: 'Andale Mono', monospace;
+  text-decoration: underline;
+  color: #5a189a;
+  margin-top: -15rem;
+}
+
+.dark-mode .about-title {
+  color: #95F1D8;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.about-layer.middle-layer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+}
+
+.about-image img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 50%;
+  margin-top: -10rem;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) translateZ(-20px);
+  perspective: 800px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-left: 1rem;
+}
+
+.about-image img:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px) translateZ(-25px);
+}
+
+.about-text {
+  text-align: justify;
+  color: inherit;
+  max-width: 35%;
+  margin-top: -10rem;
+  margin-left: -12rem;
+}
+
+.about-me-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 1rem;
+  z-index: 2;
+}
+
+#btn1 {
+  position: absolute;
+  left: 30%;
+  top: 91rem;
+}
+
+#icon1 {
+  position: absolute;
+  left: 29%;
+  top: 89.5rem;
+}
+
+#btn2 {
+  position: absolute;
+  left: 50%;
+  top: 91rem;
+}
+
+#icon2 {
+  position: absolute;
+  left: 49%;
+  top: 89.5rem;
+}
+
+#btn3 {
+  position: absolute;
+  left: 70%;
+  top: 91rem;
+}
+
+#icon3 {
+  position: absolute;
+  left: 69%;
+  top: 89.5rem;
+}
+
+input[type="checkbox"] {
+  height: 200px;
+  width: 200px;
+  -webkit-appearance: none;
+  box-shadow: 
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70, 70, 70, 0.12);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%; 
+  border: 20px solid #ececec;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*set proeprties for when the button is clicked*/
+
+input[type="checkbox"]:checked{
+  box-shadow: 
+  -10px -10px 15px rgba(255, 255, 255, 0.5),
+  10px 10px 15px rgba(70, 70, 70, 0.12),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+  inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.user-icons:hover {
+  color: #EB108D;
+  transform: scale(1.2);
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+}
+
+/* Disable hover effect and change color when checkbox is checked */
+input[type="checkbox"]:checked + label .user-icons {
+  color: #7a7a7a;
+  transform: scale(1);
+}
+
+

@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import '../styles/Home.css';
-import profileImage from '../images/profile-avatar-animation.gif';
+import React, { useState, useEffect } from "react";
+import "../styles/Home.css";
+import profileImage from "../images/profile-avatar-animation.gif"; // Import profileImage
 
 const jobDescriptions = [
-  'full-stack software developer',
-  'biologist',
-  'tech enthusiast',
-  'book lover',
-  'avid movie watcher',
-  'data professional',
+  "tech enthusiast",
+  "full-stack software developer",
+  "biologist",
+  "tech enthusiast",
+  "book lover",
+  "avid movie watcher",
+  "data professional",
 ];
 
-const HomeDescription = () => {
+const HomeDescription = ({ isDarkMode }) => {
   const [currentDescriptionIndex, setCurrentDescriptionIndex] = useState(0);
-  const [typingDescription, setTypingDescription] = useState('');
+  const [typingDescription, setTypingDescription] = useState("");
   const [typingCursorVisible, setTypingCursorVisible] = useState(true);
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const HomeDescription = () => {
   }, [currentDescriptionIndex]);
 
   const startTypingAnimation = (description) => {
-    setTypingDescription('');
+    setTypingDescription("");
     setTypingCursorVisible(true);
 
     let currentIndex = 0;
@@ -47,16 +48,18 @@ const HomeDescription = () => {
   };
 
   return (
-    <div className="home-description">
+    <div className={`home-description ${isDarkMode ? "dark-mode" : "light-mode"}`}>
       <img src={profileImage} alt="Profile Avatar" className="profile-image" />
-      <h1>Introducing Jeri Stewart</h1>
+      <h1 className="greeting">Hello, I am </h1>
+      <h1 className="name" >Jeri Stewart</h1>
       <h2>
         {typingDescription}
         {typingCursorVisible && <span className="typing-cursor">|</span>}
       </h2>
+      <h3>Empowering Data-Driven Decisions and Crafting Innovative Solutions: Explore My Portfolio ⤵ </h3>
+      <div className="frosted-glass-background"></div>
     </div>
   );
 };
 
 export default HomeDescription;
-

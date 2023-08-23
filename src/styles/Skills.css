@@ -1,0 +1,94 @@
+.skills-page {
+    /*background-color: #cbb2fe; */
+    color: #5a189a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .dark-mode .skills-page {
+    background-color: black;
+    color: white;
+  }
+  
+  .skills-title {
+    font-size: 32px;
+    font-family: 'Andale Mono', monospace;
+    text-decoration: underline;
+    color: #5a189a;
+  }
+  
+  .dark-mode .skills-title {
+    color: #95F1D8;
+  }
+
+  .skills-icons-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .skills-icon {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 10px;
+    margin-right: 1rem;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .skills-icon .dark-mode {
+    box-shadow: 0 5px 10px rgba(250, 250, 255, 0.2);
+  }
+  
+  .skills-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .skills-icon:hover .dark-mode {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(250, 250, 255, 0.3);
+  }
+  
+
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Display in three columns */
+    gap: 10px; /* Gap between grid items */
+  }
+  
+  .skills-list li {
+    margin-bottom: 10px;
+  }
+  
+  .dark-mode .skills-list {
+    color: white;
+  }
+  
+  .download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5a189a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: #95F1D8;
+  }
+  
