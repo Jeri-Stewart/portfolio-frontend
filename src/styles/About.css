@@ -5,7 +5,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   text-align: center;
   min-height: 100vh;
   width: 100%;
@@ -13,33 +12,30 @@
 
 .dark-mode .about-page {
   /*background-color: black; */
-  color: white;
+  color: #ececec;
 }
 
 .background-card {
   position: absolute;
-  top: 53rem;
-  left: 5rem;
-  width: 90rem;
+  width: 90%; 
   height: 100%;
   background-color: #ececec;
   border-radius: 15%;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4), 0px 7px 13px -3px rgba(0,0,0,0.3), 0px -3px 0px 0px rgba(0,0,0,0.2) inset;
-  z-index: -1
+  z-index: -1;
 }
 
 .dark-mode .background-card {
   background-color: #240046;
 }
 
-
-
 .about-title {
   font-size: 32px;
   font-family: 'Andale Mono', monospace;
   text-decoration: underline;
   color: #5a189a;
-  margin-top: -15rem;
+  position: relative;
+  top: -5rem;
 }
 
 .dark-mode .about-title {
@@ -56,24 +52,23 @@
 
 .about-layer.middle-layer {
   display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
   align-items: center;
-  justify-content: space-evenly;
-  padding: 0.5rem;
+  position: relative;
+  top: -5rem;
 }
 
-.about-image img {
-  max-width: 80%;
-  max-height: 80%;
+.about-image {
+  max-width: 300px;
+  max-height: auto;
   border-radius: 50%;
-  margin-top: -10rem;
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px) translateZ(-20px);
-  perspective: 800px;
   transition: transform 0.3s, box-shadow 0.3s;
-  margin-left: 1rem;
 }
 
-.about-image img:hover {
+.about-image:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   transform: translateY(-8px) translateZ(-25px);
 }
@@ -82,53 +77,59 @@
   text-align: justify;
   color: inherit;
   max-width: 35%;
-  margin-top: -10rem;
-  margin-left: -12rem;
+  padding: 2rem;
 }
+
 
 .about-me-buttons {
   display: flex;
-  justify-content: space-evenly;
+  flex-flow: row wrap;
   width: 100%;
   margin-top: 1rem;
   z-index: 2;
 }
 
+.button-container .user-icons:hover {
+  cursor: pointer;
+}
+
+
 #btn1 {
   position: absolute;
   left: 30%;
-  top: 91rem;
+  top: 88rem;
 }
 
 #icon1 {
   position: absolute;
   left: 29%;
-  top: 89.5rem;
+  top: 86.5rem;
 }
 
 #btn2 {
   position: absolute;
   left: 50%;
-  top: 91rem;
+  top: 88rem;
 }
 
 #icon2 {
   position: absolute;
   left: 49%;
-  top: 89.5rem;
+  top: 86.5rem;
 }
 
 #btn3 {
   position: absolute;
   left: 70%;
-  top: 91rem;
+  top: 88rem;
 }
 
 #icon3 {
   position: absolute;
   left: 69%;
-  top: 89.5rem;
+  top: 86.5rem;
 }
+
 
 input[type="checkbox"] {
   height: 200px;
@@ -164,6 +165,15 @@ input[type="checkbox"]:checked{
   inset 10px 10px 15px rgba(70, 70, 70, 0.12);
 }
 
+.dark-mode input[type="checkbox"]:checked{
+  box-shadow: 
+  -10px -10px 15px rgba(255, 255, 255, 0.03),
+  10px 10px 15px rgba(0, 0, 0, 0.25),
+  inset -10px -10px 15px rgba(255, 255, 255, 0.03),
+  inset 10px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+
 
 .user-icons:hover {
   color: #EB108D;
@@ -176,5 +186,3 @@ input[type="checkbox"]:checked + label .user-icons {
   color: #7a7a7a;
   transform: scale(1);
 }
-
-

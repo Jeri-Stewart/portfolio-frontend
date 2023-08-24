@@ -59,10 +59,8 @@
 
 .frosted-glass-background {
   position: absolute;
-  top: 5rem;
-  left: 5rem;
-  width: 80%;
-  height: 90%;
+  width: 90%;
+  height: 100%;
   backdrop-filter: blur(5px);
   z-index: -1; 
 }

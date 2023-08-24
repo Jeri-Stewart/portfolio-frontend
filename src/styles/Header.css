@@ -1,12 +1,8 @@
 /* styles/Header.css */
 .header {
-  padding: 0;
-  margin: 0;
   font-size: 1rem;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 999;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -26,8 +22,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  margin: 0;
   height: 3rem; /* Adjust the height of the navigation bar */
 }
 
@@ -43,7 +37,6 @@
   color: inherit;
   font-family: 'Trattatello', cursive;
   font-weight: bold;
-  padding: 0.5rem 1rem;
   transition: color 0.3s ease-in-out, border-bottom 0.3s ease-in-out;
 }
 
@@ -60,7 +53,6 @@
 
 .dark-mode-toggle {
     cursor: pointer;
-    padding: 0.5rem;
     margin-right: 3rem; /* move the image to the left */
     transition: filter 0.3s ease-in-out;
   

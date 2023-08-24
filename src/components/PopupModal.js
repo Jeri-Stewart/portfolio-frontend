@@ -20,13 +20,12 @@ const CloseButton = styled.button`
   margin-top: 10px;
   padding: 5px 10px;
   border: none;
-  background-color: ${(props) => props.theme.buttonBackground};
+  background-color: #EB108D;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 `;
 
-// Create styled components for the title, gif, and text
 
 const Gif = styled.img`
   max-width: 200px; 
@@ -36,30 +35,29 @@ const Gif = styled.img`
 `;
 
 const Title = styled.h2`
-  color: ${(props) => {
-    console.log("isDarkMode:", props.isDarkMode);
-    return props.isDarkMode ? "#95F1D8" : "#333";
-  }};
+  color: ${(props) => (props.isDarkMode ? "#95F1D8" : "#757bc8")};
   font-size: 24px;
 `;
+
 
 const Text = styled.p`
   color: ${(props) => {
     console.log("isDarkMode:", props.isDarkMode);
-    return props.isDarkMode ? "#95F1D8" : "#667";
+    return props.isDarkMode ? "#ececec" : "#667";
   }};
 `;
 
 // Define themes for dark and light modes
 const darkTheme = {
-  modalBackground: "#2b2b2b",
+  modalBackground: "#240046",
   buttonBackground: "#95F1D8",
 };
 
 const lightTheme = {
-  modalBackground: "white",
-  buttonBackground: "#95F1D8",
+  modalBackground: "white", 
+  buttonBackground: "#757bc8",
 };
+
 
 const PopupModal = ({ isOpen, onClose, title, gifSrc, text, isDarkMode }) => {
   const theme = isDarkMode ? darkTheme : lightTheme;

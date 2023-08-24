@@ -5,12 +5,11 @@ import organizedGif from "../images/organized.gif";
 import CollaborativeGif from "../images/collab.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import PopupModal from './PopupModal.js';
+import PopupModal from "./PopupModal.js";
 import { useDarkMode } from "../components/DarkModeContext";
 import "../styles/About.css";
 
 const About = () => {
-
   const { isDarkMode } = useDarkMode();
 
   const [checkbox1Checked, setCheckbox1Checked] = useState(false);
@@ -30,8 +29,8 @@ const About = () => {
       setCheckbox3Checked(!checkbox3Checked);
       setSelectedPopup(checkbox3Checked ? null : 3);
     }
-  }; 
-  
+  };
+
   return (
     <div
       id="about"
@@ -42,86 +41,68 @@ const About = () => {
         <h1 className="about-title">About</h1>
       </div>
       <div className="about-layer middle-layer">
-        <div className="about-image">
-          <img src={profileImage} alt="Profile" />
-        </div>
-        <div className="about-text">
-          <p className="about-description">
-            I am a public health scientist and full-stack software engineer. In
-            addition to my professional pursuits, I have a passion for reading,
-            staying active mentally and physically through activities like
-            volleyball, and solving puzzles. I also enjoy volunteering and
-            supporting my community. This leads me to my career in public health
-            which began with my fascination with science and my desire to make a
-            positive impact. I worked as a biologist at the CDC with the
-            Rickettsial Diagnostic Team. I contributed to clinical diagnostic
-            testing and as well as research projects to address public health
-            challenges. There, I recognized the potential of technology to
-            enhance our ability to solve problems and support our communities,
-            leading me to software engineering. Also, I am committed to reducing
-            racial and gender bias in the technical field and believe that
-            technology holds great potential for creating actionable insights to
-            combat health disparities in underrepresented communities. I believe
-            that by combining my knowledge and skills from both disciplines, I
-            can effectively address complex challenges and provide innovative
-            solutions to improve public well-being and provide a meaningful
-            impact.
-          </p>
-        </div>
+        <img className="about-image" src={profileImage} alt="Profile" />
+        <p className="about-text">
+        Hello, I'm Jeri Stewart, a dynamic public health scientist and accomplished Software Engineer. Beyond my professional pursuits, I find joy in the pages of books, the strategy of volleyball, and the satisfaction of solving intricate puzzles. Rooted in my dedication to community, I've journeyed from public health to technology. As a biologist at the CDC's Rickettsial Diagnostic Team, I not only contributed to diagnostics and research, but also witnessed the transformative power of technology in addressing societal challenges. This realization steered me toward software engineering, where I combine my unique insights from both worlds to tackle intricate problems and craft innovative solutions. My diverse background, analytical acumen, and unyielding commitment make me an invaluable asset, poised to drive positive change through technology and beyond.
+        </p>
       </div>
       <div className="about-layer bottom-layer">
         <div className="about-me-buttons">
-          <input
-            id="btn1"
-            type="checkbox"
-            checked={checkbox1Checked}
-            onChange={() => handleCheckboxChange(1)}
-          />
-          <label htmlFor="btn1">
-            <FontAwesomeIcon
-              id="icon1"
-              className="user-icons"
-              icon={faUser}
-              size="3x"
-              color="#95F1D8"
+          <div className="button-container">
+            <input
+              id="btn1"
+              type="checkbox"
+              checked={checkbox1Checked}
+              onChange={() => handleCheckboxChange(1)}
             />
-          </label>
-
-          <input
-            id="btn2"
-            type="checkbox"
-            checked={checkbox2Checked}
-            onChange={() => handleCheckboxChange(2)}
-          />
-          <label htmlFor="btn2">
-            <FontAwesomeIcon
-              id="icon2"
-              className="user-icons"
-              icon={faUser}
-              size="3x"
-              color="#95F1D8"
+            <label htmlFor="btn1">
+              <FontAwesomeIcon
+                id="icon1"
+                className="user-icons"
+                icon={faUser}
+                size="3x"
+                color="#95F1D8"
+              />
+            </label>
+          </div>
+          <div className="button-container">
+            <input
+              id="btn2"
+              type="checkbox"
+              checked={checkbox2Checked}
+              onChange={() => handleCheckboxChange(2)}
             />
-          </label>
-
-          <input
-            id="btn3"
-            type="checkbox"
-            checked={checkbox3Checked}
-            onChange={() => handleCheckboxChange(3)}
-          />
-          <label htmlFor="btn3">
-            <FontAwesomeIcon
-              id="icon3"
-              className="user-icons"
-              icon={faUser}
-              size="3x"
-              color="#95F1D8"
+            <label htmlFor="btn2">
+              <FontAwesomeIcon
+                id="icon2"
+                className="user-icons"
+                icon={faUser}
+                size="3x"
+                color="#95F1D8"
+              />
+            </label>
+          </div>
+          <div className="button-container">
+            <input
+              id="btn3"
+              type="checkbox"
+              checked={checkbox3Checked}
+              onChange={() => handleCheckboxChange(3)}
             />
-          </label>
+            <label htmlFor="btn3">
+              <FontAwesomeIcon
+                id="icon3"
+                className="user-icons"
+                icon={faUser}
+                size="3x"
+                color="#95F1D8"
+              />
+            </label>
+          </div>
         </div>
       </div>
       <PopupModal
-        ClassName="popup-modal"
+        className="popup-modal"
         isOpen={selectedPopup === 1}
         onClose={() => setSelectedPopup(null)}
         title="Adaptable and Fast Learner"
@@ -129,24 +110,27 @@ const About = () => {
         text=" Successfully completed Hackbright Academy Bright Paths Bootcamp with expertise in Java, REST API, React, 
         and Spring Framework, showcasing a high aptitude for learning and mastering new technologies
         "
+        isDarkMode={isDarkMode} 
       />
       <PopupModal
-        ClassNameName="popup-modal"
+        className="popup-modal"
         isOpen={selectedPopup === 2}
         onClose={() => setSelectedPopup(null)}
         title="Organized and Meticulous"
         gifSrc={organizedGif}
         text="Excelled in managing data for clinical and research specimens, implementing efficient laboratory practices, 
         and maintaining a high standard of quality in a public health laboratory environment"
+        isDarkMode={isDarkMode} 
       />
       <PopupModal
-        ClassNameName="popup-modal"
+        className="popup-modal"
         isOpen={selectedPopup === 3}
         onClose={() => setSelectedPopup(null)}
         title="Collaborative Team Player"
         gifSrc={CollaborativeGif}
         text="Thrived in diverse, cross-functional environments, leveraging strong communication skills to work alongside 
         4+ teams, ensuring effective diagnostic testing and surveillance for pathogenic organisms"
+        isDarkMode={isDarkMode} 
       />
     </div>
   );

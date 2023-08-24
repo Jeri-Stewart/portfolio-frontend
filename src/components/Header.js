@@ -1,7 +1,7 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
 import darkModeImage from "../images/light-dark-mode.png";
-import { useDarkMode } from "../components/DarkModeContext";
+import { useDarkMode } from "../components/DarkModeContext.js";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -52,10 +52,7 @@ const Header = () => {
             Contact
           </NavHashLink>
         </div>
-        <div
-          className="dark-mode-toggle"
-          onClick={toggleDarkMode}
-        >
+        <div className="dark-mode-toggle" onClick={toggleDarkMode}>
           <img src={darkModeImage} alt="Dark Mode Toggle" />
         </div>
       </nav>

@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header"
+import Header from "../components/Header";
 import { useDarkMode } from "../components/DarkModeContext";
 import "../styles/Skills.css";
 
@@ -24,10 +24,25 @@ import skillsDark8 from "../images/skills-icons-dark-8.png";
 import skillsDark9 from "../images/skills-icons-dark-9.png";
 import skillsDark10 from "../images/skills-icons-dark-10.png";
 
-
-
 const SkillsPage = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+  const handleDownloadClick = async () => {
+    try {
+      const response = await fetch("/Jeri_Stewart_Resume.pdf");
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = "Jeri_Stewart_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (error) {
+      console.error("Error downloading resume:", error);
+    }
+  };
 
   return (
     <div
@@ -35,6 +50,7 @@ const SkillsPage = () => {
       className={`skills-page ${isDarkMode ? "dark-mode" : "light-mode"}`}
     >
       <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+      <div className="background-card"></div>
       <div className="skills-section">
         <h1
           className={`skills-title ${isDarkMode ? "dark-mode" : "light-mode"}`}
@@ -122,15 +138,27 @@ const SkillsPage = () => {
         </ul>
       </div>
       <div className="skills-section">
-        <a
-          href="my-portfolio/src/Jeri_Stewart_Resume.pdf"
+        <button
           className={`download-button ${
             isDarkMode ? "dark-mode" : "light-mode"
           }`}
-          download
+          onClick={() => {
+            window.open(
+              "https://docs.google.com/document/d/e/2PACX-1vTHzdPOWTrEYRYtUg67smORPMb9alEeC53XoW3ZRDF-MC9Xjbe0DGqrB5K7S0TKnw/pub",
+              "_blank"
+            );
+          }}
+        >
+          View Resume
+        </button>
+        <button
+          className={`download-button ${
+            isDarkMode ? "dark-mode" : "light-mode"
+          }`}
+          onClick={handleDownloadClick}
         >
           Download Resume
-        </a>
+        </button>
       </div>
     </div>
   );

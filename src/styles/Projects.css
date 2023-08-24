@@ -1,18 +1,14 @@
 .projects-page {
-    /*background-color: #cbb2fe; */
-    color: #5a189a;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem;
     text-align: center;
-    min-height: 100vh;
+    margin-top:16rem;
     width: 100%;
   }
   
   .dark-mode .projects-page {
-    background-color: black;
     color: white;
   }
   
@@ -21,32 +17,86 @@
     font-family: "Andale Mono", monospace;
     text-decoration: underline;
     margin-bottom: 1rem;
+    color: #5a189a;
+  }
+
+  .dark-mode .projects-title {
+    color: #95F1D8;
   }
   
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .project-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 10.5), 
-           inset 10px 10px 15px rgba(70, 70, 70, 10.22);
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-  }
-  
-  .project-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Increased shadow on hover */
-    background-color: #EB108D;
-  }
-  
-  .project-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Display 3 items per row */
+  gap: 1rem;
+}
+
+.project-item {
+  position: relative;
+  width: 100%;
+  max-width: 100vw; /* Set maximum width based on viewport width */
+}
+
+.project-image-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 100vw; /* Set maximum width based on viewport width */
+  height: 30vh; 
+  max-height: 100vh; /* Set maximum height based on viewport height */
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 10.5), inset 10px 10px 15px rgba(70, 70, 70, 10.22);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.project-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Change color based on dark/light mode */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s;
+}
+
+.project-item:hover .project-hover-overlay {
+  opacity: 1; /* Show on hover */
+}
+
+.project-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  gap: 10px;
+}
+
+.project-icon {
+  font-size: 1rem; /* Adjust icon size */
+  color: rgba(255, 255, 255, 0.8);
+  background-color: transparent; /* Make icons transparent initially */
+  border-radius: 50%;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.project-item:hover .project-icon {
+  background-color: rgba(0, 0, 0, 0.6); /* Change color on hover */
+}
+
+.project-description {
+  padding: 10px;
+  font-size: 14px;
+  color: white;
+}
