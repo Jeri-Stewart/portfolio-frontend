@@ -27,18 +27,9 @@ import skillsDark10 from "../images/skills-icons-dark-10.png";
 const SkillsPage = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
-  const handleDownloadClick = async () => {
+  const handleDownloadClick = () => {
     try {
-      const response = await fetch("/Jeri_Stewart_Resume.pdf");
-      const blob = await response.blob();
-
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = "Jeri_Stewart_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      window.open("/Jeri_Stewart_Resume.pdf", "_blank");
     } catch (error) {
       console.error("Error downloading resume:", error);
     }
