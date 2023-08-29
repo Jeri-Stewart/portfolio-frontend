@@ -29,7 +29,7 @@ const SkillsPage = () => {
 
   const handleDownloadClick = () => {
     try {
-      window.open("/Jeri_Stewart_Resume.pdf", "_blank");
+      window.open("/Jeri_Stewart_Resume_portfolio.pdf", "_blank");
     } catch (error) {
       console.error("Error downloading resume:", error);
     }
