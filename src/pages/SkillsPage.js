@@ -29,7 +29,11 @@ const SkillsPage = () => {
 
   const handleDownloadClick = () => {
     try {
-      window.open("/Jeri_Stewart_Resume_portfolio.pdf", "_blank");
+      // Get the direct URL of the PDF file in the public folder
+      const pdfUrl = process.env.PUBLIC_URL + "/Jeri_Stewart_Resume_portfolio.pdf";
+      
+      // Open the PDF URL in a new tab for download
+      window.open(pdfUrl, "_blank");
     } catch (error) {
       console.error("Error downloading resume:", error);
     }
