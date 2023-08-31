@@ -1,5 +1,4 @@
 .about-page {
-  /*background-color: #cbb2fe; */
   color: #5a189a;
   display: flex;
   flex-direction: column;
@@ -11,31 +10,84 @@
 }
 
 .dark-mode .about-page {
-  /*background-color: black; */
   color: #ececec;
 }
 
+/* STYLING FOR ABOUT BACKGROUND CARD */
+
 .background-card {
   position: absolute;
-  width: 90%; 
+  width: 90%;
   height: 100%;
   background-color: #ececec;
   border-radius: 15%;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4), 0px 7px 13px -3px rgba(0,0,0,0.3), 0px -3px 0px 0px rgba(0,0,0,0.2) inset;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), 0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset;
   z-index: -1;
 }
+
 
 .dark-mode .background-card {
   background-color: #240046;
 }
+
+/* Existing styles */
+
+/* @media queries for responsive design */
+@media (max-width: 768px) {
+  .background-card {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+}
+
+/* Additional @media queries for larger screens */
+@media (min-width: 1200px) {
+  .background-card {
+    width: 80%;
+    height: 100%;
+  }
+}
+
+/* ############################## */
+
+
+/* STYLING FOR THE THREE ABOUT SECTIONS */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.about-layer.top-layer {
+  width: 100%;
+}
+
+.about-layer.middle-layer {
+  display: flex;
+  flex-wrap: wrap; 
+  flex-grow: 1;
+  justify-content: center; 
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.about-layer.bottom-layer {
+  flex-grow: 1;
+  width: 100%;
+}
+
+/* ############################## */
 
 .about-title {
   font-size: 32px;
   font-family: 'Andale Mono', monospace;
   text-decoration: underline;
   color: #5a189a;
-  position: relative;
-  top: -5rem;
 }
 
 .dark-mode .about-title {
@@ -50,21 +102,14 @@
   margin-bottom: 2rem;
 }
 
-.about-layer.middle-layer {
-  display: flex;
-  flex-wrap: wrap; 
-  justify-content: center; 
-  align-items: center;
-  position: relative;
-  top: -5rem;
-}
+/* Styling for headshot image*/
 
 .about-image {
-  max-width: 300px;
+  max-width: 25vw;
   max-height: auto;
   border-radius: 50%;
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px) translateZ(-20px);
+  box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
+  transform: translateY(-1vw) translateZ(-2vw);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -72,74 +117,50 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
   transform: translateY(-8px) translateZ(-25px);
 }
+/* ############################## */
 
+/* Styling for about text */
 .about-text {
   text-align: justify;
   color: inherit;
   max-width: 35%;
   padding: 2rem;
 }
+/* ############################## */
 
+/* Button styling */
 
 .about-me-buttons {
-  display: flex;
-  flex-flow: row wrap;
+  display: inline flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
   margin-top: 1rem;
-  z-index: 2;
 }
 
-.button-container .user-icons:hover {
-  cursor: pointer;
+.button-container {
+  display: inline flex; 
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1 1 10px; /* Adjust the flex values as needed */
+  margin: 1rem;
+  position: relative;
 }
 
-
-#btn1 {
-  position: absolute;
-  left: 30%;
-  top: 88rem;
-}
-
-#icon1 {
-  position: absolute;
-  left: 29%;
-  top: 86.5rem;
-}
-
-#btn2 {
-  position: absolute;
-  left: 50%;
-  top: 88rem;
-}
-
-#icon2 {
-  position: absolute;
-  left: 49%;
-  top: 86.5rem;
-}
-
-#btn3 {
-  position: absolute;
-  left: 70%;
-  top: 88rem;
-}
-
-#icon3 {
-  position: absolute;
-  left: 69%;
-  top: 86.5rem;
-}
-
-
+/* Styling for the button itself */
 input[type="checkbox"] {
-  height: 200px;
-  width: 200px;
+  height: 11vw; /* Adjust the value based on your preference */
+  width: 11vw; /* Adjust the value based on your preference */
   -webkit-appearance: none;
   box-shadow: 
     -10px -10px 15px rgba(255, 255, 255, 0.5),
     10px 10px 15px rgba(70, 70, 70, 0.12);
   position: absolute;
-  transform: translate(-50%, -50%);
+  /*transform: translate(-50%, -50%);*/
   border-radius: 50%; 
   border: 20px solid #ececec;
   outline: none;
@@ -173,16 +194,21 @@ input[type="checkbox"]:checked{
   inset 10px 10px 15px rgba(0, 0, 0, 0.25);
 }
 
-
+/*set properties for the icon inside the button*/
 
 .user-icons:hover {
   color: #EB108D;
   transform: scale(1.2);
   filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+  cursor: pointer;
 }
 
 /* Disable hover effect and change color when checkbox is checked */
 input[type="checkbox"]:checked + label .user-icons {
   color: #7a7a7a;
   transform: scale(1);
+}
+
+.btn-label {
+  z-index: 1;
 }

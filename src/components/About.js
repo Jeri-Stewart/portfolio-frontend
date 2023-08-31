@@ -37,67 +37,82 @@ const About = () => {
       className={`about-page ${isDarkMode ? "dark-mode" : "light-mode"}`}
     >
       <div className="background-card"></div>
-      <div className="about-layer top-layer">
-        <h1 className="about-title">About</h1>
-      </div>
-      <div className="about-layer middle-layer">
-        <img className="about-image" src={profileImage} alt="Profile" />
-        <p className="about-text">
-        Hello, I'm Jeri Stewart, a dynamic public health scientist and accomplished Software Engineer. Beyond my professional pursuits, I find joy in the pages of books, the strategy of volleyball, and the satisfaction of solving intricate puzzles. Rooted in my dedication to community, I've journeyed from public health to technology. As a biologist at the CDC's Rickettsial Diagnostic Team, I not only contributed to diagnostics and research, but also witnessed the transformative power of technology in addressing societal challenges. This realization steered me toward software engineering, where I combine my unique insights from both worlds to tackle intricate problems and craft innovative solutions. My diverse background, analytical acumen, and unyielding commitment make me an invaluable asset, poised to drive positive change through technology and beyond.
-        </p>
-      </div>
-      <div className="about-layer bottom-layer">
-        <div className="about-me-buttons">
-          <div className="button-container">
-            <input
-              id="btn1"
-              type="checkbox"
-              checked={checkbox1Checked}
-              onChange={() => handleCheckboxChange(1)}
-            />
-            <label htmlFor="btn1">
-              <FontAwesomeIcon
-                id="icon1"
-                className="user-icons"
-                icon={faUser}
-                size="3x"
-                color="#95F1D8"
+      <div className="section-container">
+        <div className="about-layer top-layer">
+          <h1 className="about-title">About</h1>
+        </div>
+        <div className="about-layer middle-layer">
+          <img className="about-image" src={profileImage} alt="Profile" />
+          <p className="about-text">
+            Hello, I'm Jeri Stewart, a dynamic public health scientist and
+            accomplished Software Engineer. Beyond my professional pursuits, I
+            find joy in the pages of books, the strategy of volleyball, and the
+            satisfaction of solving intricate puzzles. Rooted in my dedication
+            to community, I've journeyed from public health to technology. As a
+            biologist at the CDC's Rickettsial Diagnostic Team, I not only
+            contributed to diagnostics and research, but also witnessed the
+            transformative power of technology in addressing societal
+            challenges. This realization steered me toward software engineering,
+            where I combine my unique insights from both worlds to tackle
+            intricate problems and craft innovative solutions. My diverse
+            background, analytical acumen, and unyielding commitment make me an
+            invaluable asset, poised to drive positive change through technology
+            and beyond.
+          </p>
+        </div>
+        <div className="about-layer bottom-layer">
+          <div className="about-me-buttons">
+            <div className="button-container" id="btnOne">
+              <input
+                id="btn1"
+                type="checkbox"
+                checked={checkbox1Checked}
+                onChange={() => handleCheckboxChange(1)}
               />
-            </label>
-          </div>
-          <div className="button-container">
-            <input
-              id="btn2"
-              type="checkbox"
-              checked={checkbox2Checked}
-              onChange={() => handleCheckboxChange(2)}
-            />
-            <label htmlFor="btn2">
-              <FontAwesomeIcon
-                id="icon2"
-                className="user-icons"
-                icon={faUser}
-                size="3x"
-                color="#95F1D8"
+              <label className="btn-label" htmlFor="btn1">
+                <FontAwesomeIcon
+                  id="icon1"
+                  className="user-icons"
+                  icon={faUser}
+                  size="3x"
+                  color="#95F1D8"
+                />
+              </label>
+            </div>
+            <div className="button-container" id="btnTwo">
+              <input
+                id="btn2"
+                type="checkbox"
+                checked={checkbox2Checked}
+                onChange={() => handleCheckboxChange(2)}
               />
-            </label>
-          </div>
-          <div className="button-container">
-            <input
-              id="btn3"
-              type="checkbox"
-              checked={checkbox3Checked}
-              onChange={() => handleCheckboxChange(3)}
-            />
-            <label htmlFor="btn3">
-              <FontAwesomeIcon
-                id="icon3"
-                className="user-icons"
-                icon={faUser}
-                size="3x"
-                color="#95F1D8"
+              <label className="btn-label" htmlFor="btn2">
+                <FontAwesomeIcon
+                  id="icon2"
+                  className="user-icons"
+                  icon={faUser}
+                  size="3x"
+                  color="#95F1D8"
+                />
+              </label>
+            </div>
+            <div className="button-container" id="btnThree">
+              <input
+                id="btn3"
+                type="checkbox"
+                checked={checkbox3Checked}
+                onChange={() => handleCheckboxChange(3)}
               />
-            </label>
+              <label className="btn-label" htmlFor="btn3">
+                <FontAwesomeIcon
+                  id="icon3"
+                  className="user-icons"
+                  icon={faUser}
+                  size="3x"
+                  color="#95F1D8"
+                />
+              </label>
+            </div>
           </div>
         </div>
       </div>
@@ -110,7 +125,7 @@ const About = () => {
         text=" Successfully completed Hackbright Academy Bright Paths Bootcamp with expertise in Java, REST API, React, 
         and Spring Framework, showcasing a high aptitude for learning and mastering new technologies
         "
-        isDarkMode={isDarkMode} 
+        isDarkMode={isDarkMode}
       />
       <PopupModal
         className="popup-modal"
@@ -120,7 +135,7 @@ const About = () => {
         gifSrc={organizedGif}
         text="Excelled in managing data for clinical and research specimens, implementing efficient laboratory practices, 
         and maintaining a high standard of quality in a public health laboratory environment"
-        isDarkMode={isDarkMode} 
+        isDarkMode={isDarkMode}
       />
       <PopupModal
         className="popup-modal"
@@ -130,7 +145,7 @@ const About = () => {
         gifSrc={CollaborativeGif}
         text="Thrived in diverse, cross-functional environments, leveraging strong communication skills to work alongside 
         4+ teams, ensuring effective diagnostic testing and surveillance for pathogenic organisms"
-        isDarkMode={isDarkMode} 
+        isDarkMode={isDarkMode}
       />
     </div>
   );
