@@ -44,20 +44,7 @@ const About = () => {
         <div className="about-layer middle-layer">
           <img className="about-image" src={profileImage} alt="Profile" />
           <p className="about-text">
-            Hello, I'm Jeri Stewart, a dynamic public health scientist and
-            accomplished Software Engineer. Beyond my professional pursuits, I
-            find joy in the pages of books, the strategy of volleyball, and the
-            satisfaction of solving intricate puzzles. Rooted in my dedication
-            to community, I've journeyed from public health to technology. As a
-            biologist at the CDC's Rickettsial Diagnostic Team, I not only
-            contributed to diagnostics and research, but also witnessed the
-            transformative power of technology in addressing societal
-            challenges. This realization steered me toward software engineering,
-            where I combine my unique insights from both worlds to tackle
-            intricate problems and craft innovative solutions. My diverse
-            background, analytical acumen, and unyielding commitment make me an
-            invaluable asset, poised to drive positive change through technology
-            and beyond.
+          Hi, I'm Jeri – a passionate public health scientist and skilled Software Engineer. When I'm not immersed in my professional work, you'll find me lost in the world of books, strategizing on the volleyball court, or unraveling challenging puzzles. My journey in public health and tech was driven by a deep commitment to community and a realization of technology's transformative potential.I saw firsthand how technology can address society's most pressing issues. I have the ability to I leverage my unique insights from both fields to solve complex problems and innovate.
           </p>
         </div>
         <div className="about-layer bottom-layer">

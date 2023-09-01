@@ -18,25 +18,24 @@
 .background-card {
   position: absolute;
   width: 90%;
-  height: 100%;
+  height: auto; /* Adjusted to 'auto' */
   background-color: #ececec;
   border-radius: 15%;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), 0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4),
+    0px 7px 13px -3px rgba(0, 0, 0, 0.3),
+    0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset;
   z-index: -1;
 }
-
 
 .dark-mode .background-card {
   background-color: #240046;
 }
 
-/* Existing styles */
-
 /* @media queries for responsive design */
 @media (max-width: 768px) {
   .background-card {
     width: 100%;
-    height: auto;
+    height: auto; 
     border-radius: 0;
   }
 }
@@ -45,7 +44,7 @@
 @media (min-width: 1200px) {
   .background-card {
     width: 80%;
-    height: 100%;
+    height: auto; 
   }
 }
 
@@ -105,7 +104,7 @@
 /* Styling for headshot image*/
 
 .about-image {
-  max-width: 25vw;
+  max-width: 16vw;
   max-height: auto;
   border-radius: 50%;
   box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2);
@@ -121,10 +120,25 @@
 
 /* Styling for about text */
 .about-text {
-  text-align: justify;
+  text-align: center;
   color: inherit;
   max-width: 35%;
   padding: 2rem;
+  font-size: 1rem; /* Default font size for larger screens */
+}
+
+/* Media queries for responsive font size */
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 0.9rem; /* Adjust font size for medium-sized screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    max-width: 80%; /* Adjust the maximum width for small screens */
+    font-size: 0.8rem; /* Adjust font size for small screens */
+  }
 }
 /* ############################## */
 
@@ -153,8 +167,8 @@
 
 /* Styling for the button itself */
 input[type="checkbox"] {
-  height: 11vw; /* Adjust the value based on your preference */
-  width: 11vw; /* Adjust the value based on your preference */
+  height: 11vw; 
+  width: 11vw;
   -webkit-appearance: none;
   box-shadow: 
     -10px -10px 15px rgba(255, 255, 255, 0.5),
@@ -167,6 +181,29 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Media queries for responsive icon size */
+@media (max-width: 768px) {
+  input[type="checkbox"] {
+    height: 10vw; /* Adjust the size for medium-sized screens */
+    width: 10vw; /* Adjust the size for medium-sized screens */
+  }
+  
+  .user-icons {
+    font-size: 2.5vw; /* Adjust the font size for medium-sized screens */
+  }
+}
+
+@media (max-width: 480px) {
+  input[type="checkbox"] {
+    height: 8vw; /* Adjust the size for small screens */
+    width: 8vw; /* Adjust the size for small screens */
+  }
+  
+  .user-icons {
+    font-size: 2vw; /* Adjust the font size for small screens */
+  }
 }
 
 .dark-mode input[type="checkbox"] {
@@ -210,5 +247,5 @@ input[type="checkbox"]:checked + label .user-icons {
 }
 
 .btn-label {
-  z-index: 1;
+  z-index: 0;
 }

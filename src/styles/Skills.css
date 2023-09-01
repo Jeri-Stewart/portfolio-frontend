@@ -29,6 +29,45 @@
     background-color: #240046;
   }
 
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .background-card {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .skills-icon {
+    max-width: 15vw; /* Adjust the maximum width for medium-sized screens */
+    max-height: 15vw; /* Adjust the maximum height for medium-sized screens */
+    margin-right: 1rem;
+  }
+
+  .skills-list {
+    font-size: 14px; /* Adjust the font size for medium-sized screens */
+    grid-template-columns: repeat(2, 1fr); /* Display in two columns for medium-sized screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .background-card {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .skills-icon {
+    max-width: 20vw; /* Adjust the maximum width for small screens */
+    max-height: 20vw; /* Adjust the maximum height for small screens */
+    margin-right: 0.5rem;
+  }
+
+  .skills-list {
+    font-size: 12px; /* Adjust the font size for small screens */
+    grid-template-columns: repeat(1, 1fr); /* Display in one column for small screens */
+  }
+}
+
   .skills-title {
     font-size: 32px;
     font-family: 'Andale Mono', monospace;
@@ -51,9 +90,9 @@
   }
   
   .skills-icon {
-    max-width: 80px;
-    max-height: 80px;
-    border-radius: 10px;
+    max-width: 5vw;
+    max-height: 5vw;
+    border-radius: 30%;
     flex-flow: row wrap;
     margin-right: 1rem;
     box-shadow: 

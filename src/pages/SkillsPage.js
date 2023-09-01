@@ -28,15 +28,19 @@ const SkillsPage = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const handleDownloadClick = () => {
-    try {
-      // Get the direct URL of the PDF file in the public folder
-      const pdfUrl = process.env.PUBLIC_URL + "/Jeri_Stewart_Resume_portfolio.pdf";
-      
-      // Open the PDF URL in a new tab for download
-      window.open(pdfUrl, "_blank");
-    } catch (error) {
-      console.error("Error downloading resume:", error);
-    }
+    // Using JavaScript method to get the PDF file
+    fetch('/Jeri_Stewart_Resume_portfolio.pdf').then((response) => {
+      response.blob().then((blob) => {
+        // Creating a new object of the PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        
+        // Setting various property values for the anchor element
+        let alink = document.createElement('a');
+        alink.href = fileURL;
+        alink.download = 'Jeri_Stewart_Resume_portfolio.pdf';
+        alink.click();
+      });
+    });
   };
 
   return (
