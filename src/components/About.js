@@ -19,32 +19,32 @@ const About = () => {
   const [selectedPopup, setSelectedPopup] = useState(null);
 
   const handleCheckboxChange = (checkboxNum) => {
+    console.log(`Checkbox ${checkboxNum} clicked`);
     if (checkboxNum === 1) {
       setCheckbox1Checked(!checkbox1Checked);
-      setSelectedPopup(checkbox1Checked ? null : 1);
+      setSelectedPopup(!checkbox1Checked ? 1 : null);
     } else if (checkboxNum === 2) {
       setCheckbox2Checked(!checkbox2Checked);
-      setSelectedPopup(checkbox2Checked ? null : 2);
+      setSelectedPopup(!checkbox2Checked ? 2 : null);
     } else if (checkboxNum === 3) {
       setCheckbox3Checked(!checkbox3Checked);
-      setSelectedPopup(checkbox3Checked ? null : 3);
+      setSelectedPopup(!checkbox3Checked ? 3 : null);
     }
-  };
+  };  
 
   return (
     <div
       id="about"
       className={`about-page ${isDarkMode ? "dark-mode" : "light-mode"}`}
     >
-      <div className="background-card"></div>
-      <div className="section-container">
+      <div className="background-card">
         <div className="about-layer top-layer">
           <h1 className="about-title">About</h1>
         </div>
         <div className="about-layer middle-layer">
           <img className="about-image" src={profileImage} alt="Profile" />
           <p className="about-text">
-          Hi, I'm Jeri – a passionate public health scientist and skilled Software Engineer. When I'm not immersed in my professional work, you'll find me lost in the world of books, strategizing on the volleyball court, or unraveling challenging puzzles. My journey in public health and tech was driven by a deep commitment to community and a realization of technology's transformative potential.I saw firsthand how technology can address society's most pressing issues. I have the ability to I leverage my unique insights from both fields to solve complex problems and innovate.
+          Hi, I'm Jeri – a passionate public health scientist and skilled Software Engineer. When I'm not immersed in my professional work, you'll find me lost in the world of books, strategizing on the volleyball court, or unraveling challenging puzzles. My journey in public health and tech was driven by a deep commitment to community and a realization of technology's transformative potential. I saw firsthand how technology can address society's most pressing issues. I have the ability to I leverage my unique insights from both fields to solve complex problems and innovate.
           </p>
         </div>
         <div className="about-layer bottom-layer">

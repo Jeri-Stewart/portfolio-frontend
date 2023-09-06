@@ -1,155 +1,157 @@
 .skills-page {
-    /*background-color: #cbb2fe; */
-    color: #5a189a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    width: 100%;
-  }
+  /*background-color: #cbb2fe; */
+  color: #5a189a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+}
 
-  .dark-mode .skills-page {
-    color: #ececec;
-  }
-  
-  .background-card {
-    position: absolute;
-    width: 90%; 
-    height: 100%;
-    margin-top:4rem;
-    background-color: #ececec;
-    border-radius: 15%;
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4), 0px 7px 13px -3px rgba(0,0,0,0.3), 0px -3px 0px 0px rgba(0,0,0,0.2) inset;
-    z-index: -1;
-  }
-  
-  .dark-mode .background-card {
-    background-color: #240046;
-  }
+.dark-mode .skills-page {
+  color: #ececec;
+}
 
-/* Media queries for responsive design */
+.background-card {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  margin-top: 4rem;
+  background-color: #ececec;
+  border-radius: 15%;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), 0px -3px 0px 0px rgba(0, 0, 0, 0.2) inset;
+  z-index: -1;
+}
+
+.dark-mode .background-card {
+  background-color: #240046;
+}
+
+/* Media queries for responsive design - medium screens */
 @media (max-width: 768px) {
   .background-card {
+    min-height: 150vh; /* Adjust the minimum height for medium screens */
     width: 100%;
     height: auto;
     border-radius: 0;
+    margin-bottom: 2rem; /* Add margin at the bottom for spacing */
   }
 
   .skills-icon {
-    max-width: 15vw; /* Adjust the maximum width for medium-sized screens */
-    max-height: 15vw; /* Adjust the maximum height for medium-sized screens */
-    margin-right: 1rem;
+    max-width: 15vw;
+    max-height: 15vw;
   }
 
   .skills-list {
-    font-size: 14px; /* Adjust the font size for medium-sized screens */
-    grid-template-columns: repeat(2, 1fr); /* Display in two columns for medium-sized screens */
+    font-size: 14px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Media queries for small screens */
 @media (max-width: 480px) {
   .background-card {
+    min-height: 200vh; /* Adjust the minimum height for small screens */
     width: 100%;
     height: auto;
     border-radius: 0;
+    margin-bottom: 2rem; /* Add margin at the bottom for spacing */
   }
 
   .skills-icon {
-    max-width: 20vw; /* Adjust the maximum width for small screens */
-    max-height: 20vw; /* Adjust the maximum height for small screens */
-    margin-right: 0.5rem;
+    max-width: 20vw;
+    max-height: 20vw;
   }
 
   .skills-list {
-    font-size: 12px; /* Adjust the font size for small screens */
-    grid-template-columns: repeat(1, 1fr); /* Display in one column for small screens */
+    font-size: 12px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills-title {
+    text-align: center;
   }
 }
 
-  .skills-title {
-    font-size: 32px;
-    font-family: 'Andale Mono', monospace;
-    text-decoration: underline;
-    color: #5a189a;
-    margin-top: -3rem;
+.skills-title {
+  font-size: 32px;
+  font-family: 'Andale Mono', monospace;
+  text-decoration: underline;
+  color: #5a189a;
+}
 
-  }
-  
-  .dark-mode .skills-title {
-    color: #95F1D8;
-  }
+.dark-mode .skills-title {
+  color: #95F1D8;
+}
 
-  .skills-icons-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .skills-icon {
-    max-width: 5vw;
-    max-height: 5vw;
-    border-radius: 30%;
-    flex-flow: row wrap;
-    margin-right: 1rem;
-    box-shadow: 
-    -10px -10px 15px rgba(255, 255, 255, 0.5),
-    10px 10px 15px rgba(70, 70, 70, 0.12);
-    border: 20px solid #ececec;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
+.skills-icons-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
 
-  .dark-mode .skills-icon {
-    box-shadow: 0 5px 10px rgba(250, 250, 255, 0.2);
-    border: 20px solid #240046;
-    box-shadow: 
-    -10px -10px 15px rgba(255, 255, 255, 0.03),
-    10px 10px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .skills-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  }
+.skills-icon {
+  max-width: 5vw;
+  max-height: 5vw;
+  border-radius: 30%;
+  flex-flow: row wrap;
+  margin-right: 1rem;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5), 10px 10px 15px rgba(70, 70, 70, 0.12);
+  border: 5px solid #ececec;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-  .dark-mode .skills-icon:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(250, 250, 255, 0.3);
-  }
-  
-  
-  .skills-list {
-    list-style: none;
-    font-size: 18px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Display in three columns */
-    gap: 10px; /* Gap between grid items */
-  }
-  
-  .skills-list li {
-    margin-bottom: 10px;
-  }
-  
-  .dark-mode .skills-list {
-    color: white;
-  }
-  
-  .download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #5a189a;
-    margin-left: 1rem;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-    transition: background-color 0.3s;
-  }
-  
-  .download-button:hover {
-    background-color: #95F1D8;
-  }
-  
+.dark-mode .skills-icon {
+  box-shadow: 0 5px 10px rgba(250, 250, 255, 0.2);
+  border: 5px solid #240046;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.03), 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skills-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .skills-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(250, 250, 255, 0.3);
+}
+
+.skills-list {
+  list-style: none;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.skills-list li {
+  margin-bottom: 10px;
+}
+
+.dark-mode .skills-list {
+  color: white;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5a189a;
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: #95F1D8;
+}
+

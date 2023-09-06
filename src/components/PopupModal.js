@@ -60,6 +60,7 @@ const lightTheme = {
 
 
 const PopupModal = ({ isOpen, onClose, title, gifSrc, text, isDarkMode }) => {
+  console.log(`Modal isOpen: ${isOpen}`);
   const theme = isDarkMode ? darkTheme : lightTheme;
 
   return (
