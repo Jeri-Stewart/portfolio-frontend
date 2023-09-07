@@ -1,7 +1,7 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
 import darkModeImage from "../images/light-dark-mode.png";
-import { useDarkMode } from "../components/DarkModeContext.js";
+import { useDarkMode } from "./DarkModeContext";
 import "../styles/Header.css";
 
 const Header = () => {

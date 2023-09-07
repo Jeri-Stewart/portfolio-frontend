@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import profileImage from "../images/profile-avatar-animation.gif"; 
-import { useDarkMode } from "../components/DarkModeContext";
+import profileImage from "../images/profile-avatar-animation.gif";
+import { useDarkMode } from "./DarkModeContext";
 import "../styles/Home.css";
-
 
 const jobDescriptions = [
   "tech enthusiast",
@@ -14,7 +13,7 @@ const jobDescriptions = [
   "data professional",
 ];
 
-const HomeDescription = () => {
+const Home = () => {
   const { isDarkMode } = useDarkMode();
 
   const [currentDescriptionIndex, setCurrentDescriptionIndex] = useState(0);
@@ -52,18 +51,24 @@ const HomeDescription = () => {
   };
 
   return (
-    <div className={`home-description ${isDarkMode ? "dark-mode" : "light-mode"}`}>
+    <div
+      id="home"
+      className={`home-description ${isDarkMode ? "dark-mode" : "light-mode"}`}
+    >
       <img src={profileImage} alt="Profile Avatar" className="profile-image" />
       <h1 className="greeting">Hello, I am </h1>
-      <h1 className="name" >Jeri Stewart</h1>
+      <h1 className="name">Jeri Stewart</h1>
       <h2>
         {typingDescription}
         {typingCursorVisible && <span className="typing-cursor">|</span>}
       </h2>
-      <h3>Empowering Data-Driven Decisions and Crafting Innovative Solutions: Explore My Portfolio ⤵ </h3>
+      <h3>
+        Empowering Data-Driven Decisions and Crafting Innovative Solutions:
+        Explore My Portfolio ⤵{" "}
+      </h3>
       <div className="frosted-glass-background"></div>
     </div>
   );
 };
 
-export default HomeDescription;
+export default Home;

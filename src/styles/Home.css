@@ -4,9 +4,8 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   color: #5a189a; /* Light mode text color */
-  position: relative; /* Add this line */
 }
 
 .profile-image {
@@ -57,11 +56,24 @@
   }
 }
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-description h1.name {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+
+  .home-description h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+}
+
 .frosted-glass-background {
-  position: absolute;
-  width: 90%;
-  height: 100%;
+  position:absolute;
+  top: 6rem;
+  width: 85%;
+  height: 90%;
   backdrop-filter: blur(5px);
+  border-radius: 15%;
   z-index: -1; 
 }
 
@@ -73,4 +85,5 @@
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
 }
+
 

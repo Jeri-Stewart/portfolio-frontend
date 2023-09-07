@@ -1,15 +1,12 @@
 import React from "react";
-import { useDarkMode } from "../components/DarkModeContext.js";
+import { useDarkMode } from "./DarkModeContext.js";
 import linkedinLightIcon from "../images/linkedin-light.png";
 import linkedinDarkIcon from "../images/linkedin-dark.png";
 import githubLightIcon from "../images/github-light.png";
 import githubDarkIcon from "../images/github-dark.png";
-import resumeLightIcon from "../images/resume-light.png";
-import resumeDarkIcon from "../images/resume-dark.png";
 import "../styles/Contact.css";
 
 const Contact = () => {
-
   const { isDarkMode } = useDarkMode();
 
   return (
@@ -49,4 +46,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

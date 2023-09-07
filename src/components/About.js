@@ -5,8 +5,8 @@ import organizedGif from "../images/organized.gif";
 import CollaborativeGif from "../images/collab.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import PopupModal from "./PopupModal.js";
-import { useDarkMode } from "../components/DarkModeContext";
+import PopupModal from "./PopupModal";
+import { useDarkMode } from "./DarkModeContext";
 import "../styles/About.css";
 
 const About = () => {
@@ -30,7 +30,7 @@ const About = () => {
       setCheckbox3Checked(!checkbox3Checked);
       setSelectedPopup(!checkbox3Checked ? 3 : null);
     }
-  };  
+  };
 
   return (
     <div
@@ -44,7 +44,15 @@ const About = () => {
         <div className="about-layer middle-layer">
           <img className="about-image" src={profileImage} alt="Profile" />
           <p className="about-text">
-          Hi, I'm Jeri – a passionate public health scientist and skilled Software Engineer. When I'm not immersed in my professional work, you'll find me lost in the world of books, strategizing on the volleyball court, or unraveling challenging puzzles. My journey in public health and tech was driven by a deep commitment to community and a realization of technology's transformative potential. I saw firsthand how technology can address society's most pressing issues. I have the ability to I leverage my unique insights from both fields to solve complex problems and innovate.
+            Hi, I'm Jeri – a passionate public health scientist and skilled
+            Software Engineer. When I'm not immersed in my professional work,
+            you'll find me lost in the world of books, strategizing on the
+            volleyball court, or unraveling challenging puzzles. My journey in
+            public health and tech was driven by a deep commitment to community
+            and a realization of technology's transformative potential. I saw
+            firsthand how technology can address society's most pressing issues.
+            I have the ability to I leverage my unique insights from both fields
+            to solve complex problems and innovate.
           </p>
         </div>
         <div className="about-layer bottom-layer">
