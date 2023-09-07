@@ -130,7 +130,7 @@ const Projects = () => {
                 React.js. This interactive web application showcases diverse
                 skills and achievements, including technical proficiencies,
                 professional experience, and academic accomplishments. The
-                portfolio is designed to be responsive and visually applealing.
+                portfolio is designed to be responsive and visually appealing.
                 It also includes a dark mode feature.
               </div>
             </div>
