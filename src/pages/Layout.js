@@ -5,6 +5,7 @@ import About from "../components/About";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 import { useDarkMode } from "../components/DarkModeContext";
 
 import '../styles/Particles.css';
@@ -14,6 +15,7 @@ import '../styles/About.css';
 import '../styles/Projects.css';
 import '../styles/Skills.css';
 import '../styles/Contact.css';
+import "../styles/Footer.css";
 import '../styles/Layout.css';
 
 
@@ -28,6 +30,7 @@ const Layout = () => {
       <Projects isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
       <Contact isDarkMode={isDarkMode} />
+      <Footer isDarkMode={isDarkMode} />
     </div>
   );
 };

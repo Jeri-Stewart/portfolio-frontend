@@ -30,9 +30,8 @@
 /* Media queries for responsive design - medium screens */
 @media (max-width: 768px) {
   .background-card {
-    min-height: 150vh; /* Adjust the minimum height for medium screens */
     width: 100%;
-    height: auto;
+    min-height: auto;
     border-radius: 0;
     margin-bottom: 2rem; /* Add margin at the bottom for spacing */
   }
@@ -51,7 +50,6 @@
 /* Media queries for small screens */
 @media (max-width: 480px) {
   .background-card {
-    min-height: 200vh; /* Adjust the minimum height for small screens */
     width: 100%;
     height: auto;
     border-radius: 0;
@@ -151,5 +149,6 @@
 
 .download-button:hover {
   background-color: #95F1D8;
+  cursor: pointer;
 }
 

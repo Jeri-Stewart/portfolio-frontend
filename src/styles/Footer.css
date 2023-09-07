@@ -1,0 +1,19 @@
+.footer {
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Add transitions for smoother mode changes */
+    background-color: #240046;
+    color: #757bc8;
+  }
+  
+  .footer-text {
+    font-size: 16px;
+  }
+  
+  /* Dark mode styles */
+  .dark-mode .footer{
+    background-color: #240046;
+    color: #ececec;
+  }
+
+  

@@ -6,6 +6,7 @@ import CollaborativeGif from "../images/collab.gif";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import PopupModal from "./PopupModal";
+import VideoPopup from "./VideoPopup";
 import { useDarkMode } from "./DarkModeContext";
 import "../styles/About.css";
 
@@ -30,6 +31,13 @@ const About = () => {
       setCheckbox3Checked(!checkbox3Checked);
       setSelectedPopup(!checkbox3Checked ? 3 : null);
     }
+  };
+
+  const [isVideoPopupOpen, setIsVideoPopupOpen] = useState(false);
+
+  // Add this function to handle the video popup close event
+  const closeVideoPopup = () => {
+    setIsVideoPopupOpen(false);
   };
 
   return (
@@ -110,6 +118,14 @@ const About = () => {
             </div>
           </div>
         </div>
+        <div className="about-layer footer-layer">
+          <button
+            className="download-button"
+            onClick={() => setIsVideoPopupOpen(true)}
+          >
+            Press Play
+          </button>
+        </div>
       </div>
       <PopupModal
         className="popup-modal"
@@ -140,6 +156,12 @@ const About = () => {
         gifSrc={CollaborativeGif}
         text="Thrived in diverse, cross-functional environments, leveraging strong communication skills to work alongside 
         4+ teams, ensuring effective diagnostic testing and surveillance for pathogenic organisms"
+        isDarkMode={isDarkMode}
+      />
+      <VideoPopup
+        isOpen={isVideoPopupOpen}
+        onClose={closeVideoPopup}
+        videoUrl="https://player.vimeo.com/video/859414933?h=fccdb7258c"
         isDarkMode={isDarkMode}
       />
     </div>
