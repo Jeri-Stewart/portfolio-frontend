@@ -27,6 +27,14 @@ const Skills = () => {
   const { isDarkMode } = useDarkMode();
 
   const handleDownloadClick = () => {
+
+    // Using JavaScript method to open the Google Docs link in a new tab
+    window.open(
+      "https://docs.google.com/document/d/1DFEhB0ErU6L-sWcX3Klt2U6emm00YPHz/edit?usp=sharing&ouid=101448246955840914844&rtpof=true&sd=true",
+      "_blank"
+    );
+    
+    /* code for downloading resume pdf
     // Using JavaScript method to get the PDF file
     fetch("/Jeri_Stewart_Resume_portfolio.pdf").then((response) => {
       response.blob().then((blob) => {
@@ -40,6 +48,7 @@ const Skills = () => {
         alink.click();
       });
     });
+    */
   };
 
   return (

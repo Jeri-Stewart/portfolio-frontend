@@ -4,8 +4,10 @@ import styled from "styled-components";
 
 // Define a styled component for the modal
 const StyledModal = styled(Modal)`
-  width: 800px;
-  height: 400px;
+  width: 90%; 
+  max-width: 800px; 
+  height: auto; 
+  max-height: 90vh; 
   margin: 0 auto;
   padding: 20px;
   background-color: ${(props) => props.theme.modalBackground};
@@ -13,8 +15,9 @@ const StyledModal = styled(Modal)`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative;
-  top:10rem;
+  top: 10rem;
 `;
+
 
 const CloseButton = styled.button`
   margin-top: 10px;

@@ -4,8 +4,9 @@ import styled from "styled-components";
 
 // Define a styled component for the video modal
 const StyledVideoModal = styled(Modal)`
-  width: 800px;
-  height: 600px;
+  width: 90vw; /* Adjust the width as needed */
+  max-width: 800px; /* Optional: set a max-width to avoid excessive stretching */
+  height: auto;
   margin: 0 auto;
   background-color: ${(props) => props.theme.modalBackground};
   border-radius: 10px;
@@ -26,13 +27,17 @@ const CloseButton = styled.button`
 
 const VideoContainer = styled.div`
   width: 100%;
-  height: 100%;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 * 100%) */
 `;
 
 const VideoEmbed = styled.iframe`
   width: 100%;
   height: 100%;
   border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 `;
 
 // Define themes for dark and light modes
@@ -55,9 +60,9 @@ const VideoPopup = ({ isOpen, onClose, videoUrl, isDarkMode }) => {
         <VideoEmbed
           src={videoUrl}
           title="Embedded Video"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen"
-          allowfullscreen
+          allowFullScreen
         ></VideoEmbed>
       </VideoContainer>
       <CloseButton onClick={onClose}>Close</CloseButton>
@@ -66,3 +71,4 @@ const VideoPopup = ({ isOpen, onClose, videoUrl, isDarkMode }) => {
 };
 
 export default VideoPopup;
+
